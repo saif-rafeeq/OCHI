@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.start:hover .start1,
+.start:hover .start2 {
+  background-color: black;
+  color: white;
+}
+
+/* @media (max-width: 768px) {
+    .max-md:hidden {
+      display: none;
+    }
+  } */
+.in,
+.im {
+  /* background-color: red; */
+  position: relative;
+  cursor: pointer;
+}
+
+.in::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 1px;
+  height: 3px;
+  background-color: #262723;
+}
+
+.im::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 1px;
+  height: 1px;
+  background-color: #262723;
+}
+
+.in:hover::after {
+  animation-name: anime;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+}
+
+.im:hover::after {
+  animation-name: anime;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+}
+
+@keyframes anime {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 0%;
+    right: 0;
+  }
+
+  100% {
+    width: 100%;
+    left: 0;
+  }
+
+}
+
+@media (max-width:756px) {
+  .in::after {
+    height: 1.5px;
+  }
+
+}
+
+.btn:hover .smbtn {
+  width: 35px;
+  height: 35px;
+}
+
+.smbtn {
+  transition: all ease .2s;
+  /* transform-origin: left; */
+}
+
+.btn:hover .smbtn>.smbtnarrow {
+  display: initial;
+  /* color: black; */
+}
+
+.img-div,.img-div-img {
+  /* background-image: url('https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg'); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  transition: all ease .5s;
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.285);
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+}
